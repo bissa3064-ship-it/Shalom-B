@@ -1,0 +1,198 @@
+* {
+    box-sizing: border-box;
+    font-family: lucida, Arial;
+}
+
+body {
+    margin: 0;
+    background: #eef2f7;
+    padding: 15px;
+}
+
+.tela {
+    max-width: 800px;
+    margin: auto;
+}
+
+.topo {
+    background: #0f766e;
+    color: white;
+    padding: 18px;
+    border-radius: 12px;
+    text-align: center;
+    position: relative;
+}
+
+.topo h1 {
+    margin: 5px 0
+}
+
+.link-topo {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    background: white;
+    color: green;
+    padding: 6px 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.card,
+fieldset {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px #0001;
+    margin-top: 15px;
+    border: none;
+}
+
+label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #334155;
+    margin-top: 10px;
+    display: block;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    margin-top: 4px;
+    outline: none;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+@media(max-width:600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.botoes {
+    display: flex;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.btn {
+    flex: 1;
+    padding: 11px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-save {
+    background: #0f766e;
+    color: white;
+}
+
+.btn-print {
+    background: #1e293b;
+    color: white;
+}
+
+.btn-pdf {
+    background: #2563eb;
+    color: white;
+    padding: 6px 10px;
+    margin: 2px;
+}
+
+.btn-del {
+    background: #ef4444;
+    color: white;
+    padding: 6px 10px
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 13px
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left
+}
+
+th {
+    background: #0f766e;
+    color: white
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0008;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 15px
+}
+
+.modal-box {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 600px;
+    width: 100%
+}
+.login{
+    padding: 30px;
+    max-width: 360px;
+    margin: 60px auto;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    font-family: sans-serif;
+
+}
+.logo{
+    padding: 5px;
+    border: 1px solid  rgba(0, 0, 0, 0.15);
+    border-radius:12px ;
+    background:  #0f766e;
+
+}
+p{
+    font-size: 24px;
+    color: #0f766e;
+    font-family: Arial;
+}
+button{
+    padding: 8px;
+    color: black;
+    margin-top: 2%;
+    margin-left: 50%; 
+    background: violet;
+}
+
+a{
+    margin-top: 4%;
+    margin-left: 50%; 
+}
+.login input{
+    font-family: arial;
+    font-size: 15px;
+}

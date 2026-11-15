@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clínica Shalom - Nova Consulta</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <script>
+(async () => {
+  async function hash(t){
+    const b = new TextEncoder().encode(t);
+    const h = await crypto.subtle.digest('SHA-256', b);
+    return Array.from(new Uint8Array(h)).map(x=>x.toString(16).padStart(2,'0')).join('');
+  }
+  const hashCorreto = await hash("#Shalom@20.26");
+  if(sessionStorage.getItem('auth_shalom') !== hashCorreto){
+    window.location.href = "login.html";
+  }
+})();
+</script>
+  <div class="tela">
+    <div class="topo"><b>CLÍNICA SHALOM BAFATÁ</b>
+      <h1>Nova Consulta</h1><a href="historico.html" class="link-topo">📋 Ver Histórico</a>
+    </div>
+    <div class="card">
+      <div class="grid">
+        <div><label>Nome Completo</label><input id="nome"></div>
+        <div><label>Idade</label><input type="number" id="idade"></div>
+      </div>
+      <div class="grid">
+        <div><label>Sexo</label><select id="sexo">
+            <option value="">Selecione</option>
+            <option>Masculino</option>
+            <option>Feminino</option>
+          </select></div>
+        <div><label>Data</label><input type="date" id="data"></div>
+      </div>
+    </div>
+    <fieldset>
+      <legend>Dados Clínicos</legend>
+      <label>Sintomas</label><input id="sintomas">
+      <label>Diagnóstico</label><input id="diagnostico">
+      <label>Exam. Complementares</label><input id="exam">
+      <label>Tratamento</label><input id="tratamento">
+      <label>Obs</label><input id="obs">
+      <div class="botoes"><button class="btn btn-save" onclick="salvarEIr()">💾 Salvar e ir para Histórico</button>
+      </div>
+    </fieldset>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

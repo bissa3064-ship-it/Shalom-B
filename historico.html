@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clínica Shalom - Histórico</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+
+<body>
+  <div class="tela">
+    <div class="topo"><b>CLÍNICA SHALOM BAFATÁ</b>
+      <h1>Histórico de Consultas</h1><a href="index.html" class="link-topo">+ Nova Consulta</a>
+    </div>
+    <div class="card">
+      <input id="busca" placeholder="🔍 Buscar por nome..." oninput="listarHistorico()">
+      <table>
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>Paciente / Info</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="tabelaHist"></tbody>
+      </table>
+      <div class="botoes"><button class="btn btn-print" onclick="exportarTudoExcel()">📊 Exportar Tudo Excel
+          (CSV)</button></div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal">
+    <div class="modal-box" id="modalBox"></div>
+  </div>
+  <script src="script.js"></script>
+  <script> listarHistorico(); </script>
+</body>
+
+</html>
